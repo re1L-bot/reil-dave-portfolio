@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Reil Dave</title>
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 16px;
+        }
+
+        /* Profile Image Animation */
+        .profile-img {
+            display: block; 
+            margin: 0 auto 20px; 
+            border-radius: 50%; 
+            border: 4px solid #3b82f6;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 { margin-bottom: 5px; color: #0f172a; font-size: 2.5em; }
+        .info { color: #64748b; font-size: 1.2em; font-weight: 400; }
+
+        /* Scroll Reveal Animation Styles */
+        .reveal {
+            position: relative;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        section { margin: 50px 0; }
+        
+        h2 { 
+            color: #3b82f6; 
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2::after {
+            content: "";
+            height: 2px;
+            flex-grow: 1;
+            background: #e2e8f0;
+            margin-left: 10px;
+        }
+
+        /* Modern Skills Tags */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-item {
+            background: #eff6ff;
+            color: #1d4ed8;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            border: 1px solid #dbeafe;
+        }
+
+        .skill-item:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Modern Project Cards */
+        .project-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: #3b82f6;
+            transform: translateX(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .project-card h3 { margin-top: 0; color: #1e293b; }
+
+        /* Contact Styles */
+        .contact-box {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.9em;
+            color: #94a3b8;
+        }
+
+        a { color: #3b82f6; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="profile2.0.jpg" alt="Reil Dave" class="profile-img">
+    
+    <header>
+        <h1>Reil Dave Bawiin</h1>
+        <p class="info">BSIT | 3rd Year Student</p>
+    </header>
+
+    <section id="objective" class="reveal">
+        <h2>🎯 Career Objective</h2>
+        <p>
+            An ambitious and tech-savvy student seeking a challenging internship in Software Development. 
+            I aim to leverage my skills in coding and problem-solving to build impactful digital solutions 
+            while growing within a professional team.
+        </p>
+    </section>
+
+    <section id="skills" class="reveal">
+        <h2>🛠 Skills</h2>
+        <ul class="skills-list">
+            <li class="skill-item">HTML5 & CSS3</li>
+            <li class="skill-item">JavaScript (ES6+)</li>
+            <li class="skill-item">Python</li>
+            <li class="skill-item">Git & GitHub</li>
+            <li class="skill-item">UI/UX Design</li>
+            <li class="skill-item">PHP</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="reveal">
+        <h2>📂 Projects</h2>
+        <div class="project-card">
+            <h3>Pizza Hub E-Commerce Website</h3>
+            <p>A responsive e-commerce website for a pizza delivery service built with HTML, CSS, and JavaScript, using PHP for backend functionality.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="reveal">
+        <h2>📞 Contact Information</h2>
+        <div class="contact-box">
+            <p><strong>📧 Email:</strong> renebawiin@gmail.com</p>
+            <p><strong>🌐 Facebook:</strong> <a href="https://www.facebook.com/reil.ducay" target="_blank">reil.ducay</a></p>
+        </div>
+    </section>
+
+    <div class="footer">
+        © 2026 Reil Dave Portfolio. Built with passion and code.
+    </div>
+</div>
+
+<script>
+    // Scroll Reveal Logic
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+    // To check the scroll position on page load
+    reveal();
+</script>
+
+</body>
+</html>
